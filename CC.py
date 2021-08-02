@@ -1,3 +1,8 @@
+#########################################
+## Author: Sander Siepel ################
+## Email: sander.siepel@student.vu.nl ###
+#########################################
+
 class ConsensusCluster:
     def __init__(self, data, resample_iterations, min_k, max_k, resample_fraction, res_folder_name=None, verbose=False):
          """ A class to perform Consensus K-medoids (with Partitioning Around Medoids) Clustering, based on the original paper by Stefano Monti, Pablo Tamayo, Jill Mesirov & Todd Golub
