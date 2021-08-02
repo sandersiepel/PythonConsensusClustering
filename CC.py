@@ -9,7 +9,7 @@ class ConsensusCluster:
             resample_iterations    Number of iterations. Parameter H in the original algorithm
             min_k                  Lowest value of k to try
             max_k                  Highest value of k to try
-            resample_fraction      Fraction of original data set that. The perturbed data sets are size resample_fraction*N
+            resample_fraction      Fraction of original data set for the perturbed data sets. These data sets are then size: N*resample_fraction.
             res_folder_name        Folder path to save the output
             verbose                Boolean that states whether or not to output loggings
         """
@@ -154,8 +154,8 @@ class ConsensusCluster:
 
 
 class SubClusters():
-    # This class performs the clustering for one specific value of k, for 'resample_iterations' times. 
-    # It keeps track of the cluster assignments for each resample iteration, and eventually holds the iteration_table.
+    """ This class is called by the ConsensusCluster class, and performs the actual clustering for each value of k. """
+    
     def __init__(self, resample_iterations, data, k, resample_fraction):
         self.silhouette_score = None
         self.resample_iterations = resample_iterations
