@@ -16,6 +16,7 @@ represent real structure. One can thus create several perturbations of the origi
 ```
 # The code takes as input `data`, which is a distance/(dis)similarity matrix. For example, use the Gower's Distance for mixed data types.
 # df is your pd.DataFrame, holding your items to be clustered
+
 data_gower = pd.DataFrame(gower.gower_matrix(df))
 c = ConsensusCluster(data=data_gower, resample_iterations=30, min_k = 2, max_k = 7, resample_fraction=0.8, res_folder_name=None, verbose=True)
 
